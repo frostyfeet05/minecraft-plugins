@@ -10,13 +10,22 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>death-marker</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <artifactId>dynmap-auto-mark</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>us.dynmap</groupId>
+            <artifactId>dynmap-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 

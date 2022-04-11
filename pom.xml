@@ -14,15 +14,23 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>dynmap</id>
+            <url>https://repo.mikeprimm.com/</url>
+        </repository>
     </repositories>
 
     <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <java.version>17</java.version>
+        <spigot.version>1.18.1-R0.1-SNAPSHOT</spigot.version>
+        <lombok.version>1.18.22</lombok.version>
+        <dynmap.version>3.4-beta-3</dynmap.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <modules>
-        <module>death-marker</module>
+        <module>dynmap-auto-mark</module>
     </modules>
 
     <dependencyManagement>
@@ -30,7 +38,20 @@
             <dependency>
                 <groupId>org.spigotmc</groupId>
                 <artifactId>spigot-api</artifactId>
-                <version>1.17-R0.1-SNAPSHOT</version>
+                <version>${spigot.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>us.dynmap</groupId>
+                <artifactId>dynmap-api</artifactId>
+                <version>${dynmap.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
         </dependencies>

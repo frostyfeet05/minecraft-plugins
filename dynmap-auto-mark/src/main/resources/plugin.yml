@@ -1,0 +1,9 @@
+name: DynmapAutoMarker
+main: be.frostyfeet.minecraft.dynmap.AutoMarkerPlugin
+version: 2.0.0
+api-version: 1.18
+depend: [dynmap]
+commands:
+  ffmap:
+    description: Shortcuts for adding markers on your Dynmap
+    usage: /ffmap < town | portal | ship | temple | tower | mineshaft > "Name"
