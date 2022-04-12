@@ -1,6 +1,7 @@
 package be.frostyfeet.minecraft.dynmap.listeners;
 
 import be.frostyfeet.minecraft.dynmap.DynmapHelper;
+import be.frostyfeet.minecraft.dynmap.MarkerType;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -33,7 +34,7 @@ public class AdvancementEventListener implements Listener {
             String advancementName = this.advancements.get(advancementKey);
             String message = String.format("%s has made the advancement [%s]", player.getDisplayName(), advancementName);
 
-            this.helper.markAdvancement(message, player.getLocation());
+            this.helper.createMarker(MarkerType.ADVANCEMENT, message, player.getLocation());
         }
     }
 }

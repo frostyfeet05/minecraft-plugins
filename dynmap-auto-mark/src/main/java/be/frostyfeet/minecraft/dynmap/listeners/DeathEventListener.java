@@ -1,6 +1,7 @@
 package be.frostyfeet.minecraft.dynmap.listeners;
 
 import be.frostyfeet.minecraft.dynmap.DynmapHelper;
+import be.frostyfeet.minecraft.dynmap.MarkerType;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.event.EventHandler;
@@ -14,6 +15,6 @@ public class DeathEventListener implements Listener {
 
     @EventHandler
     public void onEntityDeathEvent(PlayerDeathEvent event) {
-        this.helper.markDeath(event.getDeathMessage(), event.getEntity().getLocation());
+        this.helper.createMarker(MarkerType.DEATH, event.getDeathMessage(), event.getEntity().getLocation());
     }
 }
